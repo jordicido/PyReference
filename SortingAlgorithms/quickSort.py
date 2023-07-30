@@ -6,8 +6,8 @@ def quick_sort(nums, low, high):
     if low < high:
         result = partition(nums, low, high)
         nums = result[0]
-        quick_sort(nums, low, result[1])
-        quick_sort(nums, result[1], high)
+        quick_sort(nums, low, result[1]-1)
+        quick_sort(nums, result[1]+1, high)
 
     return nums
 
